@@ -1,0 +1,29 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+
+ <section class="gh-article gh-inner">
+   <header class="gh-article-header">
+    
+ {{#get "posts" limit="all" order="published_at desc"}}
+  
+    {{#foreach posts visibility="all"}}
+
+      <a href="{{url}}" >
+
+        <time class="gh-card-meta" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+
+        <h2 class="content-wrap">{{title}}</h2>
+      
+      </a>
+    
+
+    {{/foreach}}
+
+{{/get}}
+       
+  
+    </header>
+</section>
+
+

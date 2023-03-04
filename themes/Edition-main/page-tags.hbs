@@ -1,0 +1,25 @@
+{{!< default}}
+
+<main class="gh-main gh-outer">
+
+ <section class="gh-article gh-inner">
+   <header class="gh-article-header">
+    
+        {{#get 'tags' limit='100' include='count.posts' order='count.posts desc'}}
+        {{#foreach tags}}
+     
+            <a href='{{ url }}'>
+               
+            <h2 class="ontent-wrap">{{ name }}</h2> 
+      
+                <div class="gh-card-meta">
+                   {{ count.posts }} posts.
+                </div>
+            </a>
+     
+        {{/foreach}}
+        {{/get}}
+  
+    </header>
+</section>
+
